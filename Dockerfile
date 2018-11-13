@@ -8,6 +8,8 @@ RUN sudo apt-get update \
 	&& sudo pip install awscli
 
 # install npm dependencies
-RUN sudo npm install --global lerna serverless typescript
+RUN sudo npm install --global lerna typescript \
+	&& sudo npm install -g try-thread-sleep \
+	&& sudo npm install -g serverless --ignore-scripts spawn-sync
 
 CMD ["/bin/bash"]
