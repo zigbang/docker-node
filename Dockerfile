@@ -10,7 +10,7 @@ RUN sudo apt-get update \
 # install npm dependencies
 RUN sudo npm install --global lerna typescript \
 	&& sudo npm install -g try-thread-sleep \
-	&& sudo npm install -g serverless@^1.34.1 --ignore-scripts spawn-sync
+	&& sudo npm install -g serverless@1.32.0 --ignore-scripts spawn-sync
 
 # versions
 RUN python --version && jq --version && aws --version \
