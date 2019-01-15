@@ -1,4 +1,4 @@
-FROM circleci/node:8.10
+FROM circleci/node:11.2
 
 # install awscli
 RUN sudo apt-get update \
