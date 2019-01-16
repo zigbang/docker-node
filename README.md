@@ -9,3 +9,5 @@
 * [Lerna](https://lernajs.io/)
 * [TypeScript](https://www.typescriptlang.org/)
 * [serverless](https://serverless.com/)
+* [ts-node](https://github.com/TypeStrong/ts-node)
+* [prettier](https://prettier.io/)
