@@ -1,16 +1,17 @@
 FROM circleci/node:8.10
 
-# install awscli & jq
-RUN sudo apt-get update \
-	&& sudo apt-get install -y python-dev jq \
-	&& sudo curl -O https://bootstrap.pypa.io/get-pip.py \
-	&& sudo python get-pip.py \
-	&& sudo pip install awscli
+RUN sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates
 
 # install yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-RUN sudo apt-get update && sudo apt-get install yarn
+RUN sudo apt-get update && sudo apt-get -y install yarn
+
+# install awscli & jq
+RUN sudo apt-get install -y python-dev jq \
+	&& sudo curl -O https://bootstrap.pypa.io/get-pip.py \
+	&& sudo python get-pip.py \
+	&& sudo pip install awscli
 
 # install npm dependencies
 RUN sudo npm install --global yarn lerna typescript ts-node \
