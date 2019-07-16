@@ -6,6 +6,7 @@
 
 * [jq](https://stedolan.github.io/jq/)
 * [AWS Command Line Interface](https://aws.amazon.com/cli/)
+* [yarn](https://yarnpkg.com/)
 * [Lerna](https://lernajs.io/)
 * [TypeScript](https://www.typescriptlang.org/)
 * [serverless](https://serverless.com/)
