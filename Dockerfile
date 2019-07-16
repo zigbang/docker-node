@@ -1,7 +1,8 @@
 FROM circleci/node:8.10
 
 # install awscli & jq
-RUN sudo apt-get install -y python-dev jq \
+RUN sudo apt-get update \
+	&& sudo apt-get install -y python-dev jq \
 	&& sudo curl -O https://bootstrap.pypa.io/get-pip.py \
 	&& sudo python get-pip.py \
 	&& sudo pip install awscli
