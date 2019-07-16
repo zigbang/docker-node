@@ -17,4 +17,6 @@ RUN python --version && jq --version && aws --version \
 	&& echo "lerna $(lerna --version)" && echo "tsc $(tsc --version)" \
 	&& echo "serverless $(serverless --version)"
 
+USER root
+
 CMD ["/bin/bash"]
